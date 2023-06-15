@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Configure ScrollTrigger
 ScrollTrigger.defaults({
-  markers: true, // Set to 'true' to see ScrollTrigger markers (for debugging)
+//   markers: true, // Set to 'true' to see ScrollTrigger markers (for debugging)
 });
 
 // Section Pinning
