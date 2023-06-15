@@ -57,3 +57,10 @@ body {
   .horizontal_section_wrappera{
     background-color: #fff;
   }
+  .sectionaa{
+    /* margin-top: -200px !important; */
+  }
+  .horizontal_section_wrapper{
+    /* position: sticky;
+    top:0px; */
+  }

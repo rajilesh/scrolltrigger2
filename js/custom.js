@@ -24,23 +24,26 @@ gsap.utils.toArray(".section").forEach((section) => {
         },
         ease: "none",
         scrollTrigger: {
-        //   trigger: section,
+          trigger: section,
 
         //   trigger: '.horizontal_section_wrappera',
         // start: "top bottom",
         // end: "+=200",
   
         start: 'top top',
-        end: 'bottom bottom',
+
+        // start: () => "top top",
+        // end: 'bottom bottom',
         //   start: () => "center center",
-        //   end: () => `+=${cards.scrollWidth - card.offsetWidth}`,
+          end: () => `+=${cards.scrollWidth - card.offsetWidth}`,
 
         // end: "+=300",
           scrub: true,
-          pin: true,
+        //   pin: true,
           invalidateOnRefresh: true,
           anticipatePin: 0,
         //   pinSpacing: false,
+        pin:'.containera',
   
           snap: {
             snapTo: 1 / (4 - 1),
@@ -51,14 +54,23 @@ gsap.utils.toArray(".section").forEach((section) => {
         }
       });
       // Use standard vertical scroll pinning
-    } else {
-      ScrollTrigger.create({
-        // markers: true,
-        trigger: section,
-        start: () => "top top",
-        pin: true,
-        anticipatePin: 1
-      });
+    }  if (section.dataset.type === "vertical") {
+
+    //   ScrollTrigger.create({
+    //     markers: true,
+    //     trigger: section,
+    //     start: () => "top top",
+    //     pin: true,
+    //     anticipatePin: 1
+    //   });
+    }else {
+    //   ScrollTrigger.create({
+    //     // markers: true,
+    //     trigger: section,
+    //     start: () => "top top",
+    //     pin: true,
+    //     anticipatePin: 1
+    //   });
     }
   });
   
